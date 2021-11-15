@@ -13,7 +13,7 @@ const AllOrder = ({user}) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you Sure to Delete?');
         if (proceed) {
-            const url = `http://localhost:5000/users/${id}`;
+            const url = `https://pacific-citadel-61229.herokuapp.com/users/${id}`;
             setCountDelete(countDelete+1);
 
             fetch(url, {
@@ -33,7 +33,7 @@ const AllOrder = ({user}) => {
     // handle update
     const handleUpdate = id => {
         const status = ['Shipped'];
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://pacific-citadel-61229.herokuapp.com/users/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

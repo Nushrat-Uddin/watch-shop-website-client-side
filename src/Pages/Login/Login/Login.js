@@ -7,7 +7,7 @@ import Navbar from '../../Shared/Navbar/Navbar';
 const Login = () => {
 
     const[loginData,setLoginData]=useState({});
-    const {user,loginUser,isLoading,signInWithGoogle,authError}=useAuth();
+    const {user,loginUser,isLoading,authError}=useAuth();
 
     const location=useLocation();
     const history=useHistory();
@@ -24,9 +24,9 @@ const Login = () => {
         setLoginData(newLoginData);
     }
 
-    const handleGoogleSignIn=()=>{
-        signInWithGoogle(location,history);
-    }
+    // const handleGoogleSignIn=()=>{
+    //     signInWithGoogle(location,history);
+    // }
     return (
         <div>
             <Navbar></Navbar>

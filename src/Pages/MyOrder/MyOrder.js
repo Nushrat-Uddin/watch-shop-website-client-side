@@ -9,7 +9,7 @@ const MyOrder = () => {
     const [clients,setClients] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://pacific-citadel-61229.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setClients(data))
     }, [])

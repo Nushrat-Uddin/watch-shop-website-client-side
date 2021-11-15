@@ -8,14 +8,14 @@ const ManageProducts = () => {
     const [countDelete, setCountDelete] = useState(0);
     const { productId} = useParams();
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://pacific-citadel-61229.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])
     const handleDelete = productId => {
         const proceed = window.confirm('Are you Sure to Delete?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${productId}`;
+            const url = `https://pacific-citadel-61229.herokuapp.com/products/${productId}`;
             setCountDelete(countDelete+1);
 
             fetch(url, {

@@ -86,7 +86,7 @@ const useFirebase=()=>{
     },[])
 
     useEffect(()=>{
-            fetch(`http://localhost:5000/registeredusers/${user.email}`)
+            fetch(`https://pacific-citadel-61229.herokuapp.com/registeredusers/${user.email}`)
             .then(res=>res.json())
             .then(data=>setAdmin(data.admin))
     },[user.email])
@@ -104,7 +104,7 @@ const useFirebase=()=>{
 
     const saveUser=(email,displayName,method)=>{
         const user ={email,displayName};
-        fetch('http://localhost:5000/registeredusers',{
+        fetch('https://pacific-citadel-61229.herokuapp.com/registeredusers',{
             method:method,
             headers:{
                 'content-type':'application/json'

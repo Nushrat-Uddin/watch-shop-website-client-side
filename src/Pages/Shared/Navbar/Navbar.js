@@ -27,7 +27,7 @@ const Navbar = () => {
             <MenuIcon />
             </IconButton>
             <Link to='/home'><Button color="inherit" style={{color:'white'}}>Home</Button></Link>
-            <Link to='/addproduct'> <Button color="inherit"style={{color:'white'}}>ADD a product</Button></Link>
+            
             <Link to='/explore'> <Button color="inherit"style={{color:'white'}}>Explore</Button></Link>
             
             {

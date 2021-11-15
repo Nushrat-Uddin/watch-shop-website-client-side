@@ -14,7 +14,7 @@ const Purchase = () => {
 
     const onSubmit = data => {
         data.booking_id = productId;
-        axios.post('http://localhost:5000/users', data)
+        axios.post('https://pacific-citadel-61229.herokuapp.com/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully')
@@ -26,7 +26,7 @@ const Purchase = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://pacific-citadel-61229.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     },[])

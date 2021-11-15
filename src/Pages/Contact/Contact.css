@@ -1,0 +1,13 @@
+.contact h1{
+    color: mediumblue;
+}
+.contact p{
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.contact{
+    background-color: powderblue;
+    padding: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
